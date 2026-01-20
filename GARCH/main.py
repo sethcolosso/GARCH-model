@@ -3,6 +3,7 @@
 # + 90-Day Price Action Chart with MAs + Historical Vol
 # ----------------------------------------------
 
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -82,7 +83,7 @@ plt.figure(figsize=(12, 6))
 ax1 = plt.gca()
 ax2 = ax1.twinx()
 
-# Price and moving averages
+# Price en moving averages 15 and 30
 ax1.plot(price_data.index, price_data['Close'], label='NDX Price', color='black', linewidth=1.3)
 ax1.plot(price_data.index, price_data['MA15'], label='15-Day MA', color='green', linestyle='--', linewidth=1.1)
 ax1.plot(price_data.index, price_data['MA30'], label='30-Day MA', color='orange', linestyle='--', linewidth=1.1)
@@ -104,3 +105,4 @@ plt.legend(lines1 + lines2, labels1 + labels2, loc='upper left')
 plt.grid(True, linestyle='--', alpha=0.4)
 plt.tight_layout()
 plt.show()
+
